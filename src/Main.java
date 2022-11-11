@@ -47,5 +47,99 @@ public class Main {
             total= vklad + total;
             System.out.println("Месяц " + i + ", сумма накоплений равна " + total + " рублей");
         }
+
+        //урок 2 Задание 1
+        total = 0;
+        vklad = 15000;
+        int i = 0;
+        while(total <=  2_459_000) {
+            total = total + total / 100;
+            total= vklad + total;
+            i++;
+            System.out.println("Месяц " + i + ", сумма накоплений равна " + total + " рублей");
+        }
+
+        // задание 2
+        i = 1;
+        while (i <= 10) {
+            System.out.print(i++ +" ");
+        }
+        i = 10;
+        System.out.println();
+        for (;i > 0;) {
+            System.out.print(i-- +" ");
+        }
+        // задание 3
+        System.out.println();
+        int y = 12_000_000;
+        int bornPerTh = 17;
+        int diePerTh = 8;
+        i = 1;
+        while (i <= 10) {
+            y = y + y / 1000 * bornPerTh - y / 1000 * diePerTh;
+            System.out.println("Год " + i++ +", численность населения составляет " + y);
+
+        }
+        // Д/з 2 задание 1
+        int depositVasiliy = 15_000;
+        int percent = 7;
+        int month = 1;
+        while (depositVasiliy <= 12_000_000) {
+            depositVasiliy = depositVasiliy + depositVasiliy / 100 * percent;
+            System.out.println("Месяц " + month++ + " сумма накоплений " + depositVasiliy);
+        }
+        // задание 2
+        System.out.println();
+        depositVasiliy = 15_000;
+        percent = 7;
+        month = 1;
+        while (depositVasiliy <= 12_000_000) {
+            depositVasiliy = depositVasiliy + depositVasiliy / 100 * percent;
+            if (month % 6 == 0) {
+                System.out.println("Месяц " + month + " сумма накоплений " + depositVasiliy);
+            }
+            month++;
+        }
+        // задание 3
+        System.out.println();
+        depositVasiliy = 15_000;
+        percent = 7;
+        month = 1;
+        while (month <= 108) {
+            depositVasiliy = depositVasiliy + depositVasiliy / 100 * percent;
+            if (month % 6 == 0) {
+                System.out.println("Полугодие " + month / 6 + " сумма накоплений " + depositVasiliy);
+            }
+            month++;
+        }
+
+        // задание 3
+        int firstDateFriday = 4;
+        while (firstDateFriday <=31) {
+            System.out.println("Сегодня пятница, " + firstDateFriday + "-е число. Необходимо подготовить отчет.");
+            firstDateFriday = firstDateFriday + 7;
+        }
+
+        // Д/з 3 задание 1
+        int yearOfCometa = 1;
+        int yearsBefore = 200;
+        int yearsAfter = 100;
+        int yearNow = 2022;
+        yearOfCometa = yearNow - yearsBefore;
+        int stop = yearNow + yearsAfter;
+        while (yearOfCometa <= 2122) {
+            if (yearOfCometa % 79 == 0) {
+                System.out.println(yearOfCometa);
+            }
+            yearOfCometa++;
+        }
+
+        // Д/з 3 задание 2
+        int x = 1;
+        y = 2;
+        for (; x <= 10; x++) {
+            System.out.println(y + "*" + x + " = " + y * x);
+        }
+
     }
 }
